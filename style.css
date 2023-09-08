@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    background: linear-gradient(#000, #222);
+    height: 100vh;
+    width: 100%;
+    color:#0099ff;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.conainer{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    width:80%;
+    height: 85vh;
+    border-radius: 20px;
+}
+
+
+.right,
+.left{
+    background-color:rgba(255, 255, 255, 0.1) ;
+    width:40%;
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    border-radius: 20px;
+} 
+.right{
+    overflow-y: scroll;
+}
+.right::-webkit-scrollbar{
+    display: block;
+    border-radius: 20px;
+    color: rgba(255, 255, 255,0.1);
+}
+
+.tname,
+.tdate{
+    border-color:#0099ff;
+    width:450px;
+    border-radius:30px;
+    height:50px;
+}
+
+.bordererror{
+    border-color: red;
+}
+
+.label-div{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+.tic{
+    font-size:30px ;
+}
+.tdatevalidation,
+.tnamevalidation{
+    display:none;
+    color:hsl(354, 84%, 57%);  
+}
+.none{
+    display: none;
+}
+
+
+@media (max-width:950px){
+body{
+    color: white;
+}
+.conainer{
+    flex-direction: column;
+    width:80% ;
+    height:85vh;
+}
+.right,
+.left{
+    width: 90%;
+    height: 40%;
+    align-items: center;
+}
+.input1,
+.input2{
+    width: 115px;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+}
+.tname,
+.tdate{
+    width: 110px;
+    height: 25px;
+}
+.tic{
+    font-size: 15px;
+}
+.tnamevalidation,
+.tdatevalidation{
+    position: relative;
+    top: 40px;
+    left: -50px;
+    font-size: 12px;
+}
+.alltasks{
+    width: 100%;
+}
+body::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -111;
+    background-color: #0099ff;
+    clip-path: circle(50% at 100% 100%);
+}
+body::before{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -111;
+    background-color: #0099ff;
+    clip-path: circle(50% at 0% 0%);
+}
+}
